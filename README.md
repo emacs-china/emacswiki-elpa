@@ -1,24 +1,34 @@
-# Unofficial EmacsWiki ELPA
+# EmacsWiki ELPA
 
-## How to use?
+EmacsWiki ELPA is an Emacs Lisp Package Archive for packages on [EmacsWiki][emacswiki].
 
-The service is available in both HTTP and HTTPS
+[emacswiki]: https://www.emacswiki.org/
 
-- http://elpa.emacs-china.org/emacswiki/
-- https://elpa.emacs-china.org/emacswiki/
+It is available via HTTP, HTTPS and Rsync.
 
-For example, to use HTTPS, add something like the following to your init file
+- http://mirrors.tuna.tsinghua.edu.cn/elpa/emacswiki/
+- https://mirrors.tuna.tsinghua.edu.cn/elpa/emacswiki/
+- `rsync://mirrors.tuna.tsinghua.edu.cn/elpa/emacswiki/`
+
+## `package.el`
+
+`package.el` supports HTTP and HTTPS, you should use HTTPS whenever possible. Adding the following to your Emacs init file such as `~/.emacs.d/init.el`
 
 ```elisp
-(add-to-list 'package-archives
-             '("emacswiki" . "https://elpa.emacs-china.org/emacswiki/"))
+(require 'package)
+(add-to-list
+ 'package-archives
+ '("emacswiki" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/emacswiki/") t)
+ ```
 
-```
+## Acknowledgments
 
-## How to mirror?
+- [Emacsmirror][emacsmirror] provides metadata and github mirrors for packages on EmacsWiki.
+- [MELPA][melpa] provides `package-build.el` for building ELPA from git repositories.
+- [Emacs China][emacs-china] provides VPS.
+- [清华大学开源软件镜像站][tuna-mirror] provides fast and reliable  mirror service.
 
-Use `rsync://elpa.emacs-china.org/elpa/emacswiki/`.
-
-## How it works?
-
-See `emacswiki-elpa.el`, it is about 20 lines of code. The ELPA is updated once per day.
+[emacsmirror]: https://emacsmirror.net/
+[melpa]: https://github.com/melpa/melpa/
+[emacs-china]: https://emacs-china.org/
+[tuna-mirror]: https://mirrors.tuna.tsinghua.edu.cn/
