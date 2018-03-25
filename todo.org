@@ -1,0 +1,12 @@
+* TODO Use latest package-build.el
+* TODO Delete *.entry
+
+See https://mirrors.tuna.tsinghua.edu.cn/elpa/emacswiki/
+
+* TODO Investigate build failed packages
+
+One possible reason is that the default "melpa recipe" don't work for ALL EmacsWiki packages.
+
+* TODO Badge for total packages
+
+~package-build-archive-alist-as-json~ should be helpful.
