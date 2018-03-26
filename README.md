@@ -1,6 +1,7 @@
-# EmacsWiki ELPA [![Last Update Badge][badge-link]][badge-link]
+# EmacsWiki ELPA [![Last Update Badge][badge1-link]][badge1-link] [![Total Packages Badge][badge2-link]][badge2-link]
 
-[badge-link]: https://elpa.emacs-china.org/emacswiki/last-update.svg
+[badge1-link]: https://elpa.emacs-china.org/emacswiki/last-update.svg
+[badge2-link]: https://elpa.emacs-china.org/emacswiki/count.svg
 
 EmacsWiki ELPA is an Emacs Lisp Package Archive for packages on [EmacsWiki][emacswiki].
 
