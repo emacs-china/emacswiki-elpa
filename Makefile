@@ -1,4 +1,5 @@
 # https://emacs-china.org/
+.PHONY: all packages sync badge
 all: packages sync badge
 
 packages:
