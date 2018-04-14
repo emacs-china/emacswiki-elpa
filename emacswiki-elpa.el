@@ -32,8 +32,7 @@
 (defun emacswiki-elpa-recipe-alist ()
   (let (list)
     (let ((db (expand-file-name "epkg.sqlite" emacswiki-elpa-pwd)))
-      (unless (file-exists-p db)
-        (url-copy-file "https://raw.githubusercontent.com/emacsmirror/epkgs/master/epkg.sqlite" db))
+      (url-copy-file "https://raw.githubusercontent.com/emacsmirror/epkgs/master/epkg.sqlite" db)
       (with-temp-buffer
         (call-process "sqlite3" nil t nil
                       db "-separator" " " "select name, mirror_url from packages where class='wiki'")
