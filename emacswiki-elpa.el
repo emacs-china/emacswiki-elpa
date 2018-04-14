@@ -32,6 +32,8 @@
 (defun emacswiki-elpa-recipe-alist ()
   (let (list)
     (let ((db (expand-file-name "epkg.sqlite" emacswiki-elpa-pwd)))
+      ;; FIXME This file needs to be update. However, accessing github
+      ;; from China is too slow.
       (unless (file-exists-p db)
         (url-copy-file "https://raw.githubusercontent.com/emacsmirror/epkgs/master/epkg.sqlite" db))
       (with-temp-buffer
